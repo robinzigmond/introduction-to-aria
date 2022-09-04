@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>2 - It starts with HTML</title>
+</head>
+<body>
+    <header class="no-ss">
+        Press F9 to toggle "slideshow" mode, to use left/right arrows to navigate within and between slides
+    </header>
+    <main>
+        <h1>It starts with HTML</h1>
+        <p data-reveal="1">
+            A web page, at root, consists of HTML markup.
+            This is converted by the browser to the content and behaviour that the user sees.
+        </p>
+        <p data-reveal="2">
+            (The behaviour typically comes from Javascript - which can alter the HTML "on the fly" to produce new/different content.)
+        </p>
+        <p data-reveal="3">
+            Assistive technologies - such as screenreaders - "see" the same HTML markup, NOT the visual output in the browser.They need to be able to make sense of this to announce to their users - who typically will not be able to see the visual output - the relevant parts of what is there.
+        </p>
+    </main>
+    <footer class="no-ss">
+        <a href="1.html">Previous slide</a><a href="3.html">Next slide</a>
+    </footer>
+    <script src="slides.js"></script>
+</body>
+</html>

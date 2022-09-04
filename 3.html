@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>3 - The accessibility tree</title>
+</head>
+<body>
+    <header class="no-ss">
+        Press F9 to toggle "slideshow" mode, to use left/right arrows to navigate within and between slides
+    </header>
+    <main>
+        <h1>The accessibility tree</h1>
+        <a href="https://benmyers.dev/blog/accessibility-tree/">
+            See this blog post by Ben Myers for a great in-depth explanation of this topic.
+        </a>
+        <p data-reveal="1">
+            Rather than an assistive technologies directly "reading" the HTML markup, and interpreting them
+            in their own way, the markup is first converted by the browser into an "accessibility tree".
+        </p>
+        <p data-reveal="2">Why is this a good idea?</p>
+        <ul data-reveal="3">
+            <li data-reveal="3">
+                it provides a "common language" for all assistive technologies to use
+            </li>
+            <li data-reveal="4">
+                assistive technologies are needed by their users to interpret everything on a computer/phone/tablet/etc,
+                not just webpages! Operating systems provide Accessibility Trees for native features which assistive
+                technologies already need to use - by reducing a webpage to an Accessibility Tree they need do nothing
+                special for web pages
+            </li>
+        </ul>
+        <p data-reveal="5">
+            Note the different responsibilities here:
+            <ul data-reveal="6">
+                <li data-reveal="6">
+                    Converting the HTML/DOM into an Accessibility Tree is done by the browser
+                </li>
+                <li data-reveal="7">
+                    Interpreting the Accessibility Tree into user-facing behaviour is done by the assistive technology.
+                </li>
+            </ul>
+        </p>
+        <p data-reveal="8">
+            This explains why using different screenreaders on the same browser, and the same screenreader on different
+            browsers, sometimes behave differently in the same situations.
+        </p>
+        <p data-reveal="9">Modern browser versions let you inspect the accessibility tree directly!</p>
+    </main>
+    <footer class="no-ss">
+        <a href="2.html">Previous slide</a><a href="4.html">Next slide</a>
+    </footer>
+    <script src="slides.js"></script>
+</body>
+</html>

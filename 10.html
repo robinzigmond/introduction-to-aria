@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>10 - The First Rule of ARIA</title>
+</head>
+<body>
+    <header class="no-ss">
+        Press F9 to toggle "slideshow" mode, to use left/right arrows to navigate within and between slides
+    </header>
+    <main>
+        <h1>The first Rule of ARIA</h1>
+        <p data-reveal="1">
+            The W3C actually provides 5 general "rules" for using ARIA.
+        </p>
+        <p data-reveal="2">The first rule is probably the most important:</p>
+        <p data-reveal="3">The First Rule of ARIA is...</p>
+        <p data-reveal="4">...don't use ARIA!</p>
+        <p data-reveal="5">(if you don't have to!)</p>
+        <p data-reveal="6">
+            What this rule is really about is getting you to use the native HTML element(s) with the correct semantics, and
+            only fall back on ARIA if these don't exist. Native HTML gives you a lot "for free" that ARIA on its own doesn't,
+            and is a lot harder to get wrong.
+        </p>
+        <p data-reveal="7">But there are still times where you may have to use it:</p>
+        <ul data-reveal="8">
+            <li data-reveal="8">
+                Many roles do not have native HTML equivalents - ARIA is the only option to give these more complex widgets
+                the correct semantics for screenreaders.
+            </li>
+            <li data-reveal="9">
+                You may have to support older browsers that don't have newer elements such as <pre>header</pre> available.
+            </li>
+            <li data-reveal="10">
+                Some native HTML elements have traditionally been very hard to apply styling to (eg select/checkbox). To
+                produce the desired visuals it may be necessary to build a substitute with <pre>div</pre> and/or
+                <pre>span</pre> elements and indicate the semantics using ARIA roles/attributes while adding the expected
+                behaviour with Javascript.
+            </li>
+        </ul>
+        <h2 data-reveal="11">
+            Statistical evidence for the First Rule?
+        </h2>
+        <div data-reveal="12">
+            <figure>
+                <blockquote cite="https://webaim.org/projects/million/#aria">
+                    Home pages with ARIA present averaged 70% more detected errors than those without ARIA
+                </blockquote>
+            </figure>
+            <figcaption>
+                <cite>
+                    <a href="https://webaim.org/projects/million/#aria">WebAIM Million report 2022</a>
+                </cite>
+            </figcaption>
+        </div>
+    </main>
+    <footer class="no-ss">
+        <a href="9.html">Previous slide</a><a href="11.html">Next slide</a>
+    </footer>
+    <script src="slides.js"></script>
+</body>
+</html>

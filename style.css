@@ -1,0 +1,63 @@
+.ss-mode [data-reveal]:not(.shown) {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    background-color: mediumvioletred;
+    color: floralwhite;
+    font-size: 18px;
+}
+
+main {
+    padding: 50px;
+}
+
+header, footer {
+    background-color: black;
+    padding: 1em 3em;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    color: rgb(199, 250, 247);
+}
+
+figure, figcaption {
+    margin-left: 20px;
+}
+
+figure {
+    font-style: italic;
+}
+
+blockquote {
+    margin: 2em 0;
+}
+
+li {
+    margin: 1em 0;
+}
+
+code, pre {
+    display: inline;
+}
+
+code {
+    background-color: #666;
+}
+
+.ss-mode .no-ss {
+    display: none;
+}

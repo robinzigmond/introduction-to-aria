@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>11 - The Second Rule of ARIA</title>
+</head>
+<body>
+    <header class="no-ss">
+        Press F9 to toggle "slideshow" mode, to use left/right arrows to navigate within and between slides
+    </header>
+    <main>
+        <h1>The second rule of ARIA</h1>
+        <p data-reveal="1">The second rule is: <strong>don't override native semantics</strong>.</p>
+        <div data-reveal="2">
+            This means: if you need to use an ARIA <pre>role</pre>, put it on a <pre>div</pre> or <pre>span</pre>
+            - elements which have no native role - rather than override the pre-existing role of some other element.
+        </div>
+        <div data-reveal="3">
+            Example: <code>&lt;div role="alert"&gt;&lt;/div&gt;</code> is fine, but
+            <code>&lt;h2 role="alert"&gt;&lt;/div&gt;</code> is questionable.
+        </div>
+        <p data-reveal="4">There is one exception:</p>
+        <div data-reveal="5">
+            It's OK to override semantics if the role you are adding is a more specialised meaning of
+            the element's existing role. So for example <code>&lt;li role="menuitem"&gt;</code>
+            (inside <code>&lt;ul role="menu"&gt;</code>) is fine, as a menu role is a specialised type of
+            list role.
+        </div>
+    </main>
+    <footer class="no-ss">
+        <a href="10.html">Previous slide</a><a href="12.html">Next slide</a>
+    </footer>
+    <script src="slides.js"></script>
+</body>
+</html>

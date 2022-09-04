@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>8 - What ARIA doesn't do</title>
+</head>
+<body>
+    <header class="no-ss">
+        Press F9 to toggle "slideshow" mode, to use left/right arrows to navigate within and between slides
+    </header>
+    <main>
+        <h1>What ARIA <em>doesn't</em> do</h1>
+        <p data-reveal="1">
+            It's important to note that the <strong>only</strong> thing affected by ARIA is the accessibility tree.
+            And this in turn has no relevance except to assistive technologies like screenreaders.
+        </p>
+        <p data-reveal="2">
+            And, as we all know, there is much more to accessibility than just screenreaders.
+        </p>
+        <p data-reveal="3">
+            So it is not true that "ARIA makes pages accessible" - or at least, not as simple as that!
+        </p>
+        <h2 data-reveal="4">An example</h2>
+        <div data-reveal="5">
+            <code>&lt;div role="button"&gt;hey I'm a button&lt;/div&gt;</code>
+            will be considered to be a button as far as screenreaders are concerned:
+        </div>
+        <ul data-reveal="6">
+            <li data-reveal="6">it will be announced as a button</li>
+            <li data-reveal="7">it will appear in a list of buttons on the page</li>
+            <li data-reveal="8">users will be given a way to trigger a click action on it</li>
+        </ul>
+        <div data-reveal="9">
+            <span>but...</span>
+            <ul data-reveal="10">
+                <li data-reveal="10">this "button" won't be keyboard-focusable (in the tab order)</li>
+                <li data-reveal="11">
+                    even if you make it so (with <code>tabindex="0"</code>), that focus won't be
+                    automatically visible
+                </li>
+                <li data-reveal="12">
+                    it won't allow keyboard activation (with space or enter key) like a native button does
+                </li>
+            </ul>
+        </div>
+        <p data-reveal="13">
+            You could do all this yourself (with CSS and Javascript) - but a native HTML <code>&lt;button&gt;</code>
+            would give you all of this for free, as well as working the same with screenreaders!
+        </p>
+        <p data-reveal="14">
+            Similarly, something like <code>&lt;span role="checkbox" aria-label="I'm a checkbox"&gt;&lt;/span&gt;</code> might
+            make an assistive technology treat it as a checkbox - but without considerable extra effort it will neither
+            look like a checkbox to sighted users nor do anything at all when clicked/activated!
+        </p>
+        <p data-reveal="15">
+            These examples are not particularly realistic (breaking the "first rule of ARIA" - see later!), but they make an
+            important point that's relevant also to more appropriate uses of ARIA:
+        </p>
+        <p data-reveal="16">
+            ARIA only deals with <em>semantics</em> - what an element means. It's also static, like all HTML - it can only
+            provide the state of a UI element at any one time. And it doesn't do anything at all for keyboard accessibility.
+        </p>
+        <p data-reveal="17">
+            All that has to be provided separately via Javascript.
+        </p>
+    </main>
+    <footer class="no-ss">
+        <a href="7.html">Previous slide</a><a href="9.html">Next slide</a>
+    </footer>
+    <script src="slides.js"></script>
+</body>
+</html>

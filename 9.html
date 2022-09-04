@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>9 - (very) basics of ARIA</title>
+</head>
+<body>
+    <header class="no-ss">
+        Press F9 to toggle "slideshow" mode, to use left/right arrows to navigate within and between slides
+    </header>
+    <main>
+        <h1>(Very) basics of ARIA</h1>
+        <p data-reveal="1">
+            Note: ARIA is a <strong>complicated</strong> spec. Each role has its own rules regarding how it should behave.
+            It's hard to get everything absolutely right - which is one reason not to use it unless absolutely necessary!
+        </p>
+        <p data-reveal="2">
+            But what ARIA does, in simple terms, is allow you to directly specify the properties needed to determine what
+            the accessibility tree looks like:
+        </p>
+        <ul data-reveal="3">
+            <li data-reveal="3">The <pre>role</pre> attribute gives the element's role</li>
+            <li data-reveal="4">
+                various attributes of the form <pre>aria-XXX</pre> provide the state and property values
+            </li>
+            <li data-reveal="5">
+                the <pre>aria-label</pre> or <pre>aria-labelledby</pre> attributes can be used to provide an accessible
+                name if necessary
+            </li>
+        </ul>
+    </main>
+    <footer class="no-ss">
+        <a href="8.html">Previous slide</a><a href="10.html">Next slide</a>
+    </footer>
+    <script src="slides.js"></script>
+</body>
+</html>

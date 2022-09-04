@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>12 - The Third Rule of ARIA</title>
+</head>
+<body>
+    <header class="no-ss">
+        Press F9 to toggle "slideshow" mode, to use left/right arrows to navigate within and between slides
+    </header>
+    <main>
+        <h1>The third rule of ARIA</h1>
+        <p data-reveal="1">
+            The third rule is: <strong>all interactive ARIA controls must be usable with the keyboard</strong>.
+        </p>
+        <p data-reveal="2">
+            Not really specific to ARIA at all - this applies to all content!
+        </p>
+        <p data-reveal="3">
+            But a good reminder that ARIA in itself does <strong>nothing</strong> to help with keyboard accessibility.
+            You need to do this yourself with Javascript.
+        </p>
+    </main>
+    <footer class="no-ss">
+        <a href="11.html">Previous slide</a><a href="13.html">Next slide</a>
+    </footer>
+    <script src="slides.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>1 - An Introduction to ARIA</title>
+</head>
+<body>
+    <header class="no-ss">
+        Press F9 to toggle "slideshow" mode, to use left/right arrows to navigate within and between slides
+    </header>
+    <main>
+        <h1>An introduction to ARIA</h1>
+        <p>A presentation by Robin Zigmond (Software Engineer on Front-End Engineering Team)</p>
+        <div data-reveal="1">
+            <figure>
+                <blockquote cite="https://www.w3.org/WAI/standards-guidelines/aria/">
+                    WAI-ARIA, the Accessible Rich Internet Applications Suite, defines a way to make Web content
+                    and Web applications more accessible to people with disabilities.
+                </blockquote>
+            </figure>
+            <figcaption>
+                <cite>
+                    <a href="https://www.w3.org/WAI/standards-guidelines/aria/">W3C WAI-ARIA Overview</a>
+                </cite>
+            </figcaption>
+        </div>
+        <h2 data-reveal="2">Some questions we will cover</h2>
+        <ul>
+            <li data-reveal="3">What, exactly, <em>is</em> ARIA?</li>
+            <li data-reveal="4">What is it for?</li>
+            <li data-reveal="5">What does it do?</li>
+            <li data-reveal="6">What does it <strong>not</strong> do?</li>
+            <li data-reveal="7">When should you use it?</li>
+            <li data-reveal="8">When should you <strong>not</strong> use it?</li>
+        </ul>
+    </main>
+    <footer class="no-ss">
+        <a>Previous slide</a><a href="2.html">Next slide</a>
+    </footer>
+    <script src="slides.js"></script>
+</body>
+</html>

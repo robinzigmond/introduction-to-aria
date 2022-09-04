@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>13 - The Fourth Rule of ARIA</title>
+</head>
+<body>
+    <header class="no-ss">
+        Press F9 to toggle "slideshow" mode, to use left/right arrows to navigate within and between slides
+    </header>
+    <main>
+        <h1>The fourth rule of ARIA</h1>
+        <div data-reveal="1">
+            The fourth rule is: <strong>do not use <pre>role="presentation"</pre> or <pre>aria-hidden="true"</pre>
+            on a focusable element </strong>.
+        </div>
+        <p data-reveal="2">
+            In plain language, this says that any focusable element must be exposed in the accessibility tree.
+            Otherwise assistive technology users would be unable to interact with elements that other users can.
+        </p>
+    </main>
+    <footer class="no-ss">
+        <a href="12.html">Previous slide</a><a href="14.html">Next slide</a>
+    </footer>
+    <script src="slides.js"></script>
+</body>
+</html>

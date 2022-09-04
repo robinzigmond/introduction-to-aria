@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>4 - Content of the accessibility tree</title>
+</head>
+<body>
+    <header class="no-ss">
+        Press F9 to toggle "slideshow" mode, to use left/right arrows to navigate within and between slides
+    </header>
+    <main>
+        <h1>Content of the accessibility tree</h1>
+        <p data-reveal="1">
+            Essentially, the accessibility tree consists of a collection of linked "accessibility objects".
+            That is, each element on the page is interpreted as such an object - that is, an element with
+            certain properties/features.
+        </p>
+        <p data-reveal="2">These features consist of:</p>
+        <ul data-reveal="3">
+            <li data-reveal="3">
+                <p data-reveal="3">A <strong>role</strong></p>
+                <p data-reveal="4">
+                    Essentially says what the element <strong>is</strong> and/or what it <strong>does</strong>.
+                    (Slightly more formally, this is the element's semantic meaning.)
+                    Examples of roles include:
+                </p>
+                <ul data-reveal="5">
+                    <li data-reveal="5">heading</li>
+                    <li data-reveal="6">button</li>
+                    <li data-reveal="7">combobox</li>
+                    <li data-reveal="8">and many more as we shall see!</li>
+                </ul>
+                <p data-reveal="9">
+                    Roles are used by assistive technologies in many ways:
+                    <ul data-reveal="10">
+                        <li data-reveal="10">
+                            To announce what you are interacting with - eg <i>"you are on a button"</i>
+                        </li>
+                        <li data-reveal="11">
+                            Allowing standard ways to interact with it if possible (eg giving the user a way
+                            to "click" if it's a button)
+                        </li>
+                        <li data-reveal="12">
+                            To include it in summaries of information on the page - eg a list of landmarks/headings/links etc.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+            <li data-reveal="13">
+                <p data-reveal="13">A <strong>name</strong></p>
+                <p data-reveal="14">
+                    Sometimes called "accessible name" to make its purpose clear, this is what is announced by the
+                    screenreader as a summary of what the element is or does.
+                </p>
+                <p data-reveal="15">
+                    Also important for voice recognition software - if the user says "click read more", then it will
+                    look for a clickable element with name <i>read more</i>.
+                </p>
+            </li>
+            <li data-reveal="16">
+                <p data-reveal="16">Various other <strong>states</strong> and <strong>properties</strong> of the element.</p>
+                <ul data-reveal="17">
+                    <li data-reveal="17">
+                        This is a catch-all for any and all of many other things which might need to be known about the element.
+                    </li>
+                    <li data-reveal="18">
+                        As a simple example: for a checkbox the user will want to know whether it is currently checked or not.
+                        This is an example of a <strong>state</strong>.
+                    </li>
+                    <li data-reveal="19">
+                        There's no clear-cut distinction between states and properties, but essentially a state is something
+                        that's expected to change as the user interacts with the page, while a property isn't.
+                    </li>
+                    <li data-reveal="20">
+                        The available states and properties depend on the element's role.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </main>
+    <footer class="no-ss">
+        <a href="3.html">Previous slide</a><a href="5.html">Next slide</a>
+    </footer>
+    <script src="slides.js"></script>
+</body>
+</html>

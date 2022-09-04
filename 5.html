@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>5 - Building the accessibility tree</title>
+</head>
+<body>
+    <header class="no-ss">
+        Press F9 to toggle "slideshow" mode, to use left/right arrows to navigate within and between slides
+    </header>
+    <main>
+        <h1>Building the accessibility tree</h1>
+        <p>How do browsers translate HTML markup into an accessibility tree?</p>
+        <p data-reveal="1">
+            (There is actually a specification for this with rules that browsers should follow. This is merely a very
+            high-level - and therefore necessarily incomplete and partly inaccurate - overview!)
+        </p>
+        <ul data-reveal="2">
+            <li data-reveal="2">
+                Most of the common HTML elements have an "implicit role".
+                <p data-reveal="3">
+                    The reverse is <strong>not</strong> true - many roles do not have a corresponding native HTML element.
+                    (More on this later!)
+                </p>
+            </li>
+            <li data-reveal="4">
+                The name, and the relevant states/properties, can often be easily obtained from the HTML as well
+            </li>
+        </ul>
+        <h2 data-reveal="5">Some examples:</h2>
+        <ul data-reveal="6">
+            <li data-reveal="6">
+                <code>&lt;button&gt;Click me&lt;/button&gt;</code> has a role of <pre>button</pre> and a name of
+                <pre>"click me"</pre>. Simple stuff!
+            </li>
+            <li data-reveal="7">
+                <p data-reveal="7">
+                    <code>&lt;label for="checkbox"&gt;show details&lt;/label&gt;&lt;input type="checkbox" checked id="checkbox"/&gt;</code>
+                    has
+                </p>
+                <ul data-reveal="8">
+                    <li data-reveal="8">
+                        A role of <pre>checkbox</pre>
+                        <div data-reveal="9">
+                            (<pre>input</pre> elements can have a variety of roles depending on their <pre>type</pre> attribute)
+                        </div>
+                    </li>
+                    <li data-reveal="10">
+                        A name of <pre>"show details"</pre> (from the text of the associated label element)
+                    </li>
+                    <li data-reveal="11">
+                        A <pre>checked</pre> state with the value <pre>true</pre>.
+                        <div data-reveal="12">
+                            (This is due to the <pre>checked</pre> attribute that's present. Without that the <pre>checked</pre>
+                            state would be false.)
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p data-reveal="13">
+            Note that elements like <code>&lt;div&gt;some content&lt;/div&gt;</code> and
+            <code>&lt;span&gt;some content&lt;/span&gt;</code> have <strong>no</strong> corresponding role!
+            They don't give rise to a node in the accessibility tree, so while their content is still announced by a screenreader,
+            they have no role and therefore no semantic meaning.
+        </p>
+    </main>
+    <footer class="no-ss">
+        <a href="4.html">Previous slide</a><a href="6.html">Next slide</a>
+    </footer>
+    <script src="slides.js"></script>
+</body>
+</html>
